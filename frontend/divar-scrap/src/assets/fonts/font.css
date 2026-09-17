@@ -2,34 +2,34 @@
   font-family: "vazir";
   font-style: normal;
   font-weight: normal;
-  font-display: block;
-  src: url("./Vazirmatn-RD-FD-Medium.woff2") format("truetype");
+  font-display: swap;
+  src: url("./Vazirmatn-RD-FD-Medium.woff2") format("woff2");
 }
 @font-face {
   font-family: "vazir-bold";
   font-style: normal;
   font-weight: normal;
-  font-display: block;
-  src: url("./Vazirmatn-RD-FD-Bold.woff2") format("truetype");
+  font-display: swap;
+  src: url("./Vazirmatn-RD-FD-Bold.woff2") format("woff2");
 }
 @font-face {
   font-family: "vazir-thin";
   font-style: normal;
   font-weight: normal;
-  font-display: block;
-  src: url("./Vazirmatn-RD-FD-Light.woff2");
+  font-display: swap;
+  src: url("./Vazirmatn-RD-FD-Light.woff2") format("woff2");
 }
 @font-face {
   font-family: "vazir-regular";
   font-style: normal;
   font-weight: normal;
-  font-display: block;
-  src: url("./Vazirmatn-RD-FD-Regular.woff2");
+  font-display: swap;
+  src: url("./Vazirmatn-RD-FD-Regular.woff2") format("woff2");
 }
 @font-face {
   font-family: "vazir-number";
   font-style: normal;
   font-weight: normal;
-  font-display: block;
+  font-display: swap;
   src: url("./Vazir-Number.ttf") format("truetype");
 }

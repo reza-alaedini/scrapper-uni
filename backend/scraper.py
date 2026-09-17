@@ -40,12 +40,13 @@ def scrape_divar(city: str, category: str, limit: int = 20, min_price: int = Non
 
     with sync_playwright() as p:
         browser = p.chromium.launch(
-            headless=True, 
+            headless=True,
             args=[
-                '--no-sandbox',
-                '--disable-setuid-sandbox',
-                '--disable-blink-features=AutomationControlled'
-            ]
+                "--no-sandbox",
+                "--disable-setuid-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-blink-features=AutomationControlled",
+            ],
         )
         
         context = browser.new_context(

@@ -1,0 +1,126 @@
+/* Wrapper */
+.dropdownWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  direction: rtl;
+}
+
+/* Label */
+.labelContainer {
+  display: flex;
+  justify-content: space-between;
+}
+.dropdownLabel {
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+  color: var(--primary);
+  font-family: vazir;
+}
+
+/* Control */
+.dropdownControl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  height: 2.5rem;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: var(--tertiary);
+  transition: all 0.2s ease;
+}
+
+.dropdownControl.open {
+  border-color: #3b82f6;
+}
+
+.dropdownSelected {
+  color: #333;
+}
+
+.dropdownArrow {
+  font-size: 12px;
+}
+
+/* Menu */
+.dropdownMenu {
+  position: absolute;
+  width: 100%;
+  background: white;
+  border: 1px solid #efefef;
+  border-radius: 8px;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.052);
+  top: 4.2rem;
+  max-height: 10rem;
+  overflow-y: auto;
+  transition: all 0.2s ease;
+}
+
+.dropdownItem {
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background: #f3f4f6;
+}
+
+.dropdownItem.selected {
+  background: #e5e7eb;
+}
+
+/* Disabled */
+.disabled .dropdownControl {
+  background-color: #f3f4f6;
+  cursor: not-allowed;
+  color: #a1a1aa;
+  opacity: 0.5;
+}
+.errorContainer {
+  height: 0.5rem;
+  margin-top: 0.25rem;
+}
+.error {
+  width: 100%;
+  color: var(--error);
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  font-size: 0.7rem;
+}
+.errorDropdown {
+  transition: all 0.3s;
+  background-color: #ffefed !important;
+  border: 1px solid #f1998e !important;
+}
+
+.searchContainer {
+  width: 97%;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem 0.5rem;
+  margin: 0.5rem auto;
+}
+
+.searchInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-family: vazir;
+  font-size: 1rem;
+}
+
+.searchInput:focus {
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,82 @@
+@import url("./reset.css");
+@import url("./color.css");
+@import url("./module.css");
+@import url("../fonts/font.css");
+
+body {
+  font-family: "vazir";
+  min-height: 100%;
+  line-height: 1.2rem;
+  overscroll-behavior-y: none;
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent !important;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.layout {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.layout::-webkit-scrollbar {
+  display: none;
+}
+
+.layoutContent {
+  height: calc(100vh - 4.5rem);
+  width: 100%;
+  overflow: hidden;
+}
+
+.pageFull {
+  height: 100vh;
+}
+
+@supports (height: 100svh) {
+  .layoutContent {
+    height: calc(100svh - 4.5rem);
+  }
+
+  .pageFull {
+    height: 100svh;
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapperScreen {
+  width: 100%;
+}
+
+@media only screen and (min-width: 1024px) {
+  #root {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  .wrapperScreen {
+    width: 1024px;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+}
+
+[data-overlay-container="true"] {
+  transform-origin: top;
+  transition: transform 0.4s cubic-bezier(0.32, 0.72, 0, 1);
+}

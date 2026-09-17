@@ -1,0 +1,24 @@
+python -m uvicorn main:app --reload
+
+
+Queries :
+تعداد آگهی ها به تفکیک شهر
+SELECT city, COUNT(*) AS Total_Ads
+FROM ads
+GROUP BY city
+ORDER BY Total_Ads DESC;
+
+مشاهده آگهی های یک شهر خاص
+SELECT * FROM ads 
+WHERE city = 'karaj'          --> AND category = 'mobile-phones' (یک دسته بندی خاص)
+ORDER BY price_number DESC;
+
+
+دسته‌بندی آگهی‌ها بر اساس بازه قیمتی
+SELECT title, price_number,
+CASE 
+    WHEN price_number < 100000000 THEN 'ارزان قیمت'
+    WHEN price_number BETWEEN 100000000 AND 500000000 THEN 'قیمت متوسط'
+    ELSE 'گران قیمت'
+END AS Price_Category
+FROM ads;
